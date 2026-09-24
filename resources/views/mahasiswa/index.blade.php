@@ -1,29 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Data Mahasiswa</title>
-</head>
-<body>
-    <h1>Data Mahasiswa</h1>
+<h1>Daftar Mahasiswa</h1>
 
-    <table border="1">
-        <tr>
-            <th>NIM</th>
-            <th>Nama</th>
-            <th>Email</th>
-            <th>Prodi</th>
-            <th>Semester</th>
-        </tr>
+<table border="1" cellpadding="8">
+    <tr>
+        <th>NIM</th>
+        <th>Nama</th>
+        <th>Prodi</th>
+        <th>Semester</th>
+    </tr>
 
-        @foreach ($mahasiswas as $m)
-        <tr>
-            <td>{{ $m->nim }}</td>
-            <td>{{ $m->nama }}</td>
-            <td>{{ $m->email }}</td>
-            <td>{{ $m->prodi }}</td>
-            <td>{{ $m->semester }}</td>
-        </tr>
-        @endforeach
-    </table>
-</body>
-</html>
+    @foreach ($data as $mhs)
+    <tr>
+        <td>{{ $mhs->nim }}</td>
+        <td>{{ $mhs->nama }}</td>
+        <td>{{ $mhs->prodi }}</td>
+        <td>{{ $mhs->semester }}</td>
+    </tr>
+    @endforeach
+</table>
